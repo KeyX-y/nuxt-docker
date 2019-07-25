@@ -186,7 +186,7 @@ import CryptoJS from 'crypto-js'
                     if (status === 200) {
                       if (data && data.code === 0) {
                         console.log('注册成功')
-                        // location.href = '/login'
+                        location.href = '/login'
                       } else {
                         self.error = data.msg
                       }
