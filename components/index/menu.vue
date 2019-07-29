@@ -8,7 +8,6 @@
         v-for="(item,idx) in $store.state.home.menu"
         :key="idx"
         @mouseenter="enter">
-        <i :class="item.type"/>
         {{ item.name }}
         <span class="arrow"/>
       </dd>
@@ -71,7 +70,7 @@ export default {
       },150)
     },
     enter:function(e){
-      this.kind=e.target.querySelector('i').className
+      
     },
     sover:function(){
       clearTimeout(this._timer)
