@@ -13,10 +13,10 @@ module.exports = {
       return 'smtp.qq.com'
     },
     get user() {
-      return '522289076@qq.com'
+      return '******@qq.com' // 填自己邮箱地址
     },
     get pass() {
-      return 'wddlfkeqgdcsbjaa'
+      return '******' //填smtp凭证
     },
     get code() {
       return () => {
