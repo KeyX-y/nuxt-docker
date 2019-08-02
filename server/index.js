@@ -25,7 +25,6 @@ app.use(bodyParser({
 }))
 
 app.use(json())
-
 mongoose.connect(dbconfig.dbs, {
   useNewUrlParser: true,
 })
