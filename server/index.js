@@ -12,6 +12,7 @@ const passport = require('./interface/utils/passport')
 const users = require('./interface/users')
 const geo = require('./interface/geo')
 const search = require('./interface/search')
+const webHooks = require('./interface/webHooks')
 
 const app = new Koa()
 
@@ -52,7 +53,8 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-
+  
+  app.use(webHooks.routes()).use(webHooks.allowedMethods())
   app.use(users.routes()).use(users.allowedMethods())
   app.use(geo.routes()).use(geo.allowedMethods())
   app.use(search.routes()).use(search.allowedMethods())
